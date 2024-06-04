@@ -10,8 +10,6 @@
 #include<QTimer>
 #include<QGraphicsScene>
 #include<QGraphicsItem>
-#include"short_range_weapon.h"
-#include"long_range_weapon.h"
 #include"weapon_bottle.h"
 #include"weapon_shit.h"
 #include<QGraphicsView>
@@ -19,6 +17,7 @@
 #include<QVector>
 #include<memory>
 #include<cmath>
+#include<gamestatemanager.h>
 #include<algorithm>
 namespace Ui {
 class game;
@@ -27,8 +26,38 @@ class game;
 class game :public QGraphicsView
 {
     Q_OBJECT
-
+private:
+    QString game_coin;
+    QString game_wave;
+    QString game_life;
+    QGraphicsTextItem* display_coin;
+    QGraphicsTextItem* display_wave;
+    QGraphicsTextItem* display_life;
+    QVector<card*> cards;
+    Weapon*now_weapon;
+    QVector<Weapon*>weapons;
+    QVector<ennemy*> monsters;
+    QVector<QGraphicsTextItem*> buff_numbers;
+    int buff_num[3];
+    QString buff_string[3];
+    void Delete_Weapon(int i,int j);
+    void first_wave();
+    void second_wave();
+    void third_wave();
+    void fourth_wave();
+    void fifth_wave();
+    void sixth_wave();
+    void seventh_wave();
+    void eighth_wave();
+    void ninth_wave();
+    void tenth_wave();
+    void game_lose();
+    void game_succeed();
+    void boss();
+    void DeleteWeapon(Weapon*weapon);
+    void DeleteDeadWeapon(Weapon*weapon);
 public:
+    Gamemanager manager;
     int level;
     int timecnt;
     int numof_wave;
@@ -41,31 +70,10 @@ public:
     QTimer* timer;
     bool enemystart;
     int game_coins;
-    QString game_coin;
-    QString game_wave;
-    QGraphicsTextItem* display_coin;
-    QGraphicsTextItem* display_wave;
-    QVector<card*> cards;
-    Weapon*now_weapon;
-    QVector<Weapon*>weapons;
-    QVector<ennemy*> monsters;
-
     explicit game();
     ~game();
     void gameinit(int i);
     void gameprocess();
-    void first_wave();
-    void second_wave();
-    void third_wave();
-    void fourth_wave();
-    void fifth_wave();
-    void sixth_wave();
-    void seventh_wave();
-    void eighth_wave();
-    void ninth_wave();
-    void tenth_wave();
-    void gameend();
-
     void create_new_enemy(int types,int level,int wave);
     void create_new_bullet(Weapon*weapon);
     void mouseMoveEvent(QMouseEvent *event) override;
@@ -76,9 +84,17 @@ public:
     bool collide(ennemy*enemy,Weapon*weapon);
     double rotateangle(ennemy*enemy,Weapon*weapon);
     double distance(ennemy*enemy,Weapon*weapon);
-
+    void add_buff(int types);
+    void send_buff();
+    void saveAll();
+    void loadAll();
 private:
     Ui::game *ui;
+signals:
+    void succeed();
+    void lose();
+    void use_buff();
+    void save();
 };
 
 #endif // GAME_H

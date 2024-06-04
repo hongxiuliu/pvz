@@ -2,12 +2,12 @@
 #define WEAPON_BOTTLE_H
 
 #include <QObject>
-#include"long_range_weapon.h"
-class weapon_bottle : public long_range_weapon
+#include"weapon.h"
+class weapon_bottle : public Weapon
 {
     //Q_OBJECT
 public:
-    //int bullet_type;
+    static int uplevel;
     explicit weapon_bottle();
     void loadpicture() override;
     void shootbullets() override;

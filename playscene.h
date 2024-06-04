@@ -12,11 +12,16 @@ public:
     int level;
     game*g;
     int stop_times;
+    QPushButton*map;
+    QPushButton*back;
     QPushButton*stop;
     QPushButton*save;
+    QPushButton*load;
+    QPushButton*begin;
     void init(int level);
+    ~playscene();
 signals:
-
+   void back_to_chooselevelscene();
 };
 
 #endif // PLAYSCENE_H

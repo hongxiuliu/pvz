@@ -2,28 +2,34 @@
     <qresource prefix="/pic">
         <file>pictures for project/floor.png</file>
         <file>pictures for project/grass.png</file>
-        <file>pictures for project/zombie1 (1).png</file>
-        <file>pictures for project/zombie1 (2).png</file>
-        <file>pictures for project/zombie1 (3).png</file>
-        <file>pictures for project/zombie1 (4).png</file>
-        <file>pictures for project/zombie1 (5).png</file>
         <file>pictures for project/fast01-1.png</file>
         <file>pictures for project/fast01-2.png</file>
         <file>pictures for project/huge01-1.png</file>
         <file>pictures for project/huge01-2.png</file>
         <file>pictures for project/normal01-1.png</file>
         <file>pictures for project/normal01-2.png</file>
-        <file>pictures for project/bottle_CanClick0.png</file>
         <file>pictures for project/bottle_CanClick1.png</file>
-        <file>pictures for project/CanClick0.png</file>
         <file>pictures for project/CanClick1.png</file>
         <file>pictures for project/ID1_5.png</file>
         <file>pictures for project/ID1_7.png</file>
         <file>pictures for project/ID2_13.png</file>
         <file>pictures for project/ID2_37.png</file>
+        <file>pictures for project/ice.png</file>
+        <file>pictures for project/kill.png</file>
+        <file>pictures for project/violent.png</file>
+        <file>pictures for project/initial background.jpg</file>
+        <file>pictures for project/ice_bullet.png</file>
+        <file>pictures for project/ice_fast_1.png</file>
+        <file>pictures for project/ice_fast_2.png</file>
+        <file>pictures for project/ID1_8.png</file>
+        <file>pictures for project/ID1_9.png</file>
+        <file>pictures for project/ID1_10.png</file>
+        <file>pictures for project/ID2_2.png</file>
     </qresource>
     <qresource prefix="/files">
         <file>map/map1.txt</file>
+        <file>map/map2.txt</file>
+        <file>map/game_state.dat.txt</file>
     </qresource>
     <qresource prefix="/gif">
         <file>game_gif/OGC.gif</file>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>437</width>
+    <width>495</width>
     <height>325</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <rect>
      <x>70</x>
      <y>50</y>
-     <width>321</width>
+     <width>375</width>
      <height>80</height>
     </rect>
    </property>
@@ -35,31 +35,15 @@
     <property name="bottomMargin">
      <number>10</number>
     </property>
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="font">
-       <font>
-        <family>Arial</family>
-        <pointsize>26</pointsize>
-       </font>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::Box</enum>
-      </property>
-      <property name="text">
-       <string>      塔防游戏</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>220</y>
+     <x>110</x>
+     <y>180</y>
      <width>261</width>
-     <height>80</height>
+     <height>121</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -74,6 +58,13 @@
      <widget class="QPushButton" name="beginbut">
       <property name="text">
        <string>开始游戏</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="setbtn">
+      <property name="text">
+       <string>游戏强化设置</string>
       </property>
      </widget>
     </item>

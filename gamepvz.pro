@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    buff.cpp \
     bullet.cpp \
     choosegame.cpp \
     enemy1.cpp \
@@ -23,18 +24,19 @@ SOURCES += \
     enemy3.cpp \
     ennemy.cpp \
     game.cpp \
+    gamestatemanager.cpp \
     grid.cpp \
-    long_range_weapon.cpp \
     main.cpp \
     mapp.cpp \
     playscene.cpp \
-    short_range_weapon.cpp \
+    uplevel.cpp \
     weapon.cpp \
     weapon_bottle.cpp \
     weapon_shit.cpp \
     widget.cpp
 
 HEADERS += \
+    buff.h \
     bullet.h \
     choosegame.h \
     enemy1.h \
@@ -42,11 +44,11 @@ HEADERS += \
     enemy3.h \
     ennemy.h \
     game.h \
+    gamestatemanager.h \
     grid.h \
-    long_range_weapon.h \
     mapp.h \
     playscene.h \
-    short_range_weapon.h \
+    uplevel.h \
     weapon.h \
     weapon_bottle.h \
     weapon_shit.h \
@@ -55,6 +57,7 @@ HEADERS += \
 FORMS += \
     choosegame.ui \
     game.ui \
+    uplevel.ui \
     widget.ui
 
 # Default rules for deployment.

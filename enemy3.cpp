@@ -2,8 +2,9 @@
 
 enemy3::enemy3(int level) : ennemy(level)
 {
-    hp+=20*level;
-    //movespeed+=1;
+    hp+=40*level;
+    max_hp=hp;
+    type=3;
     damage+=3*level;
     drop_money=20;
     piccnt=0;

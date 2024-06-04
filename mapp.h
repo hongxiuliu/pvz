@@ -6,7 +6,6 @@
 #include<QVector>
 class mapp
 {
-
 public:
     QVector<QVector<grid*>> map;
     QVector<QVector<char>> map1;

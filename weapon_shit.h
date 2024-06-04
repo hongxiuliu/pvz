@@ -2,13 +2,15 @@
 #define WEAPON_SHIT_H
 
 #include <QWidget>
-#include"short_range_weapon.h"
-class weapon_shit : public short_range_weapon
+#include"weapon.h"
+class weapon_shit : public Weapon
 {
     Q_OBJECT
 public:
+    static int uplevel;
     explicit weapon_shit();
     void loadpicture();
+    void shootbullets();
 
 signals:
 

@@ -5,18 +5,20 @@
 #include<QDebug>
 #include<QGraphicsItem>
 #include<QGraphicsSceneMouseEvent>
-class grid:public QGraphicsItem
+class grid:public QObject ,public QGraphicsItem
 {
+    Q_OBJECT
+private:
 public:
+    QPixmap pix;
     bool isplanted;
     int types;
-    QPixmap pix;
-    void installEventFilter();
-    bool eventFilter(QObject *watched, QEvent *event);
+
     grid();
     void mousePressEvent(QGraphicsSceneMouseEvent*ev) override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
     QRectF boundingRect() const override;
+
 };
 
 #endif // GRID_H

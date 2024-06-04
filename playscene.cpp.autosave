@@ -55,7 +55,7 @@ void playscene::init(int level){
     connect(map,&QPushButton::clicked,[this](){
         QString Defaultpath=QDir(QCoreApplication::applicationDirPath()).filePath("map");
         QString path=QFileDialog::getOpenFileName(nullptr,"选择存档文件",Defaultpath, "Text Files (*.txt)");
-
+        
     });
     g->setParent(this);
     g->level=level;
