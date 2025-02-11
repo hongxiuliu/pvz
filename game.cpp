@@ -240,7 +240,7 @@ void game::game_succeed(){
 }
 void game::game_lose(){
    timer->stop();
-   qDebug()<<"you lose the game";
+   qDebug()<<"you lose the game, Loser!";
 }
 void game::add_buff(int types){
     if(types==1){
